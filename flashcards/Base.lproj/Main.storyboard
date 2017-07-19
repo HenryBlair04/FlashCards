@@ -49,6 +49,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zw6-mi-gbn">
                                         <rect key="frame" x="0.0" y="601" width="343" height="30"/>
                                         <state key="normal" title="Final Answer!"/>
+                                        <connections>
+                                            <action selector="finalAnswerPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NdR-88-tSr"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

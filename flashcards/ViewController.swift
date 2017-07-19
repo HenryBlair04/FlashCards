@@ -13,6 +13,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 
     @IBOutlet weak var answerPickerView: UIPickerView!
     @IBOutlet weak var questionLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -51,7 +52,30 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return CardCollection.instance.currentCard.options[row];
     }
+
+
+
+    @IBAction func finalAnswerPressed(_ sender: Any) {
+
+        var alert : UIAlertController
+        //this coding tells the user whethor or not they got the question right or wrong//
+
+        if (CardCollection.instance.checkAnswer (answerPickerView.selectedRow( inComponent : 0))) {
+        //if answer is correct, this will run//
+        
+            alert = UIAlertController( title: "Correct", message: "Correct Answer!", preferredStyle: UIAlertControllerStyle.alert)
+            //UIAlertController is the initializer for an alert's title anc contents. When setting an alert type this//
+        
+            alert.addAction (UIAlertAction (title: "Hell Yeah, you sexy beast!", style: UIAlertActionStyle.default, handler: nil))
+            self.present (alert, animated: true)
+        }
+        else {
+            //answer is incorrect
+            alert = UIAlertController (title: "WRONG!", message: "What the HELL is wrong with you! Honestly you should quit. Only an idiot would continue.", preferredStyle: UIAlertControllerStyle.alert)
+            alert .addAction (UIAlertAction (title: "Continue!", style: UIAlertActionStyle.default, handler: nil))
+            self.present (alert, animated: true)
+
+        }
+        
+    }
 }
-
-
-
