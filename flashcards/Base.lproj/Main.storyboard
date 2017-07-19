@@ -31,7 +31,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="250" text="Question's text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8rP-Rz-Y7a">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="250" editable="NO" text="Question's text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8rP-Rz-Y7a">
                                         <rect key="frame" x="0.0" y="20.5" width="343" height="344"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -61,6 +61,11 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1fQ-dd-1wS" secondAttribute="bottom" constant="8" symbolic="YES" id="oOh-36-dHf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerPickerView" destination="gVF-u0-eAm" id="V4l-Bd-rJP"/>
+                        <outlet property="questionLabel" destination="VL7-9v-8OX" id="6zi-6l-ZmQ"/>
+                        <outlet property="questionTextView" destination="8rP-Rz-Y7a" id="cQ3-go-3fQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
