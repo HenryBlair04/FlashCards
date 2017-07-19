@@ -10,7 +10,6 @@
 		94AF3BD31F1EA6090097F8E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF3BD21F1EA6090097F8E9 /* AppDelegate.swift */; };
 		94AF3BD51F1EA6090097F8E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF3BD41F1EA6090097F8E9 /* ViewController.swift */; };
 		94AF3BD81F1EA6090097F8E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94AF3BD61F1EA6090097F8E9 /* Main.storyboard */; };
-		94AF3BDA1F1EA6090097F8E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94AF3BD91F1EA6090097F8E9 /* Assets.xcassets */; };
 		94AF3BDD1F1EA6090097F8E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94AF3BDB1F1EA6090097F8E9 /* LaunchScreen.storyboard */; };
 		94AF3BE51F1EACD80097F8E9 /* FlashCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF3BE41F1EACD80097F8E9 /* FlashCards.swift */; };
 /* End PBXBuildFile section */
@@ -20,10 +19,10 @@
 		94AF3BD21F1EA6090097F8E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94AF3BD41F1EA6090097F8E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		94AF3BD71F1EA6090097F8E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		94AF3BD91F1EA6090097F8E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94AF3BDC1F1EA6090097F8E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94AF3BDE1F1EA6090097F8E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94AF3BE41F1EACD80097F8E9 /* FlashCards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashCards.swift; sourceTree = "<group>"; };
+		94C9240E1F1FDF880003715A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +59,9 @@
 				94AF3BD41F1EA6090097F8E9 /* ViewController.swift */,
 				94AF3BD61F1EA6090097F8E9 /* Main.storyboard */,
 				94AF3BE41F1EACD80097F8E9 /* FlashCards.swift */,
-				94AF3BD91F1EA6090097F8E9 /* Assets.xcassets */,
 				94AF3BDB1F1EA6090097F8E9 /* LaunchScreen.storyboard */,
 				94AF3BDE1F1EA6090097F8E9 /* Info.plist */,
+				94C9240E1F1FDF880003715A /* Images.xcassets */,
 			);
 			path = flashcards;
 			sourceTree = "<group>";
@@ -128,7 +127,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				94AF3BDD1F1EA6090097F8E9 /* LaunchScreen.storyboard in Resources */,
-				94AF3BDA1F1EA6090097F8E9 /* Assets.xcassets in Resources */,
 				94AF3BD81F1EA6090097F8E9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +263,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = D27GFB8G3R;
 				INFOPLIST_FILE = flashcards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -278,6 +277,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = D27GFB8G3R;
 				INFOPLIST_FILE = flashcards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -306,6 +306,7 @@
 				94AF3BE31F1EA6090097F8E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

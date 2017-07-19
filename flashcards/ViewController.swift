@@ -14,6 +14,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var answerPickerView: UIPickerView!
     @IBOutlet weak var questionLabel: UILabel!
     
+    @IBOutlet weak var scoreLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -61,8 +62,17 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         //this coding tells the user whethor or not they got the question right or wrong//
 
         if (CardCollection.instance.checkAnswer (answerPickerView.selectedRow( inComponent : 0))) {
+            
         //if answer is correct, this will run//
-        
+          
+            scoreLabel.text = "Your Score: \(CardCollection.instance.score)"
+            
+            
+          
+            
+            
+            
+
             alert = UIAlertController( title: "Correct", message: "Correct Answer!", preferredStyle: UIAlertControllerStyle.alert)
             //UIAlertController is the initializer for an alert's title anc contents. When setting an alert type this//
         
@@ -80,4 +90,5 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         setupCardUI()
         
     }
+    
 }
