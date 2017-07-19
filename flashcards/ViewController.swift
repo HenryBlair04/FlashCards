@@ -74,8 +74,10 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             alert = UIAlertController (title: "WRONG!", message: "What the HELL is wrong with you! Honestly you should quit. Only an idiot would continue.", preferredStyle: UIAlertControllerStyle.alert)
             alert .addAction (UIAlertAction (title: "Continue!", style: UIAlertActionStyle.default, handler: nil))
             self.present (alert, animated: true)
-
         }
+        //switching to the next card
+        CardCollection.instance.nextQuestion()
+        setupCardUI()
         
     }
 }
