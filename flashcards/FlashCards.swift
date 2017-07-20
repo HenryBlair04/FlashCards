@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import GameKit
 
 class Flashcard {
     var question : String
@@ -19,6 +20,10 @@ class Flashcard {
         self.options = options1
         
         self.correctAnswer = options [1]
+        
+        //shuffles the list of options/answers//
+        self.options = shuffle (list: options1)
+        
     }
 }
 
@@ -57,6 +62,9 @@ class CardCollection {
         ]
     
         currentIndex = 0;
+        
+        cards = shuffle (list : cards)
+        //this shuffles the cards//
     }
         
     public func nextQuestion () {
@@ -64,7 +72,21 @@ class CardCollection {
         if (currentIndex >= cards.count) {
             currentIndex = 0
                 score = 0
+                //
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+                cards = shuffle (list:cards)
         }
+            currentCard.options = shuffle( list: currentCard.options)
+
     }
     
     public func checkAnswer (_ selectedAnswer : Int) -> Bool {
@@ -82,6 +104,15 @@ class CardCollection {
 
 //now we are going to do the view controller. this is takes informaiton and displays it from the CardCollection class//
 
+//below is shuffling code//
+func shuffle <T> (list: [T]) -> [T] {
+//T specifies a generic variable type for the function. This shuffle function will take a list of any <T> variable "T"ype and return that list shuffled
+    return GKRandomSource.sharedRandom().arrayByShufflingObjects(in: list) as! [T]
+//Random source is a swiftrandom number generator kit. the arrayByShufflignObjects is used to shuffle arrays. It returns these obhects in a list because it doesn't know what the objects the=y were. As! means to treat the list as the variable Type of <T>//
+
+
+
+}
 
 
 
